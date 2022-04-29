@@ -11,5 +11,6 @@ namespace Api.Data
         }
 
         public DbSet<Hero> Heroes { get; set; }
+        public DbSet<Foe> Foes { get; set; }
     }
 }

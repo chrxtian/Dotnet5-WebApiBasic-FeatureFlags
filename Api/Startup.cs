@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Api.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.FeatureManagement;
 
 namespace Api
 {
@@ -30,6 +31,8 @@ namespace Api
         {
 
             services.AddControllers();
+
+            services.AddFeatureManagement();
 
             services.AddDbContext<DataDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
